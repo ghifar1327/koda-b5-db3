@@ -1,32 +1,10 @@
--- DROP TABLE IF EXISTS movies CASCADE;
+SELECT title, release_date 
+FROM movies WHERE extract(year FROM release_date) = '2020';
 
+SELECT first_name
+FROM actors WHERE first_name LIKE 's%';
 
-
--- ---------------------------------------------------------
--- SELECT id, title, created_at, updated_at
--- FROM posts
--- -- WHERE extract(minute FROM created_at) < 25 
--- -- AND extract(minute FROM created_at) <= 30
--- -- WHERE NOT user_id=4 AND NOT user_id=6
--- WHERE NOT user_id IN (4,6)
--- -- ORDER BY user_id DESC
--- -- LIMIT 5
--- OFFSET 0;
-
--- ALTER TABLE posts
--- ADD COLUMN created_at TIMESTAMP DEFAULT NOW();
--- ALTER TABLE posts
--- ADD COLUMN updated_at TIMESTAMP;
-
--- UPDATE posts SET title='my title', updated_at=NOW()
--- WHERE id=1;
-
--- SELECT name AS "Nama", id
--- FROM users
--- WHERE name NOT LIKE '_akh%';
--- -- WHERE name LIKE '%a%';
--- -- WHERE name LIKE 'a%';
--- -- WHERE name LIKE '%a';
--- -- WHERE name LIKE '_a_';
--- -- WHERE name LIKE '_a';
--- -- WHERE name LIKE 'a_';
+SELECT title, rating, release_date
+FROM movies
+WHERE rating BETWEEN 4.0 and 8.0
+AND extract(year FROM release_date) BETWEEN '2004' and '2010';
