@@ -1,33 +1,32 @@
-CREATE TABLE movies (
-  id int GENERATED ALWAYS AS IDENTITY PRIMARY key,
-  title VARCHAR(255) NOT NULL,
-  release_date TIMESTAMP,
-  rating float,
-  director_id int,
-  genre_id int,
-  CONSTRAINT fk_movies_diretors
+-- DROP TABLE IF EXISTS movies CASCADE;
 
-);
 
-CREATE TABLE actors (
-  id int GENERATED ALWAYS AS IDENTITY PRIMARY key,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255)
-);
 
-CREATE TABLE movies_actors (
-  movie_id int,
-  actor_id int,
-  role VARCHAR(255)
-);
+-- ---------------------------------------------------------
+-- SELECT id, title, created_at, updated_at
+-- FROM posts
+-- -- WHERE extract(minute FROM created_at) < 25 
+-- -- AND extract(minute FROM created_at) <= 30
+-- -- WHERE NOT user_id=4 AND NOT user_id=6
+-- WHERE NOT user_id IN (4,6)
+-- -- ORDER BY user_id DESC
+-- -- LIMIT 5
+-- OFFSET 0;
 
-CREATE TABLE directors (
-  id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  first_name VARCHAR(225),
-  last_name VARCHAR(225)
-);
+-- ALTER TABLE posts
+-- ADD COLUMN created_at TIMESTAMP DEFAULT NOW();
+-- ALTER TABLE posts
+-- ADD COLUMN updated_at TIMESTAMP;
 
-CREATE TABLE genres (
-  id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  name VARCHAR(255)
-);
+-- UPDATE posts SET title='my title', updated_at=NOW()
+-- WHERE id=1;
+
+-- SELECT name AS "Nama", id
+-- FROM users
+-- WHERE name NOT LIKE '_akh%';
+-- -- WHERE name LIKE '%a%';
+-- -- WHERE name LIKE 'a%';
+-- -- WHERE name LIKE '%a';
+-- -- WHERE name LIKE '_a_';
+-- -- WHERE name LIKE '_a';
+-- -- WHERE name LIKE 'a_';

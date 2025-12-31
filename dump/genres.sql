@@ -1,0 +1,15 @@
+insert into genres (name) values ('Crime');
+insert into genres (name) values ('Drama|Romance|War');
+insert into genres (name) values ('Documentary');
+insert into genres (name) values ('Drama|Mystery|Sci-Fi|Thriller');
+insert into genres (name) values ('Documentary');
+insert into genres (name) values ('Drama');
+insert into genres (name) values ('Drama');
+insert into genres (name) values ('Children|Comedy|Romance|Sci-Fi');
+insert into genres (name) values ('Drama');
+insert into genres (name) values ('Action|Drama|IMAX');
+insert into genres (name) values ('Mystery|Sci-Fi|Thriller');
+insert into genres (name) values ('Comedy|Drama');
+insert into genres (name) values ('Drama|Romance');
+insert into genres (name) values ('Documentary');
+insert into genres (name) values ('Comedy|Crime');
